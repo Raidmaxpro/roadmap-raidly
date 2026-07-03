@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap Raidly</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface-1: #141414;
+    --surface-2: #1a1a1a;
+    --border: #2a2a2a;
+    --border-success: #1a3a2a;
+    --border-warning: #3a2a0a;
+    --border-danger: #3a1a1a;
+    --border-accent: #1a2a3a;
+    --text-primary: #e8e8e8;
+    --text-secondary: #aaa;
+    --text-muted: #666;
+    --text-success: #4ade80;
+    --text-warning: #fbbf24;
+    --text-danger: #f87171;
+    --text-accent: #60a5fa;
+    --bg-success: #0f2a1a;
+    --bg-warning: #2a1a00;
+    --bg-danger: #2a0f0f;
+    --bg-accent: #0f1a2a;
+    --fill-success: #4ade80;
+    --fill-warning: #fbbf24;
+    --fill-danger: #f87171;
+    --fill-accent: #60a5fa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { font-size: 22px; font-weight: 600; letter-spacing: -.02em; }
+  header p { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .logo { font-size: 28px; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  .stat {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+  }
+  .stat-n { font-size: 26px; font-weight: 600; }
+  .stat-l { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin: 2rem 0 .75rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    margin-bottom: .5rem;
+  }
+  .card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .card.done  { border-color: var(--border-success); }
+  .card.bug   { border-color: var(--border-warning); }
+  .card.p1    { border-color: var(--border-danger); }
+  .card.plan  { border-color: var(--border-accent); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 7px;
+  }
+  .badge.done   { background: var(--bg-success); color: var(--text-success); }
+  .badge.bug    { background: var(--bg-warning);  color: var(--text-warning); }
+  .badge.p1     { background: var(--bg-danger);   color: var(--text-danger); }
+  .badge.plan   { background: var(--bg-accent);   color: var(--text-accent); }
+  .badge.later  { background: var(--surface-1);   color: var(--text-muted); border: 1px solid var(--border); }
+  .name  { font-size: 12px; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+  .desc  { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+  .tags  { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag   { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 4px; background: var(--bg-accent); color: var(--text-accent); }
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .leg { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .dot.done    { background: var(--fill-success); }
+  .dot.bug     { background: var(--fill-warning); }
+  .dot.p1      { background: var(--fill-danger); }
+  .dot.plan    { background: var(--fill-accent); }
+  .dot.later   { background: #444; }
+  footer { margin-top: 2rem; font-size: 11px; color: var(--text-muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🏁</div>
+  <div>
+    <h1>Roadmap Raidly</h1>
+    <p>Mise à jour — 2026-07-03</p>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n" style="color:var(--text-success)">27</div><div class="stat-l">Terminées</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-warning)">2</div><div class="stat-l">Bugs actifs</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-danger)">2</div><div class="stat-l">Priorité P1</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-accent)">24</div><div class="stat-l">À faire / planifier</div></div>
+</div>
+
+<!-- CORE -->
+<div class="section-title">Core — identité joueur</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_multichar</div><div class="desc">Sélection personnage</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_spawn</div><div class="desc">Spawn + restauration</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_appearance</div><div class="desc">Vêtements, coiffure, tatouages</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_clothing</div><div class="desc">Shops vêtements + niveaux</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_barbershop</div><div class="desc">4 barbershops par tier</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_tattoo</div><div class="desc">Shop tatouage T1→T4</div></div>
+  <div class="card bug"><div class="badge bug">⚠ Bug</div><div class="name">multichar — niveau</div><div class="desc">Affiche NIV.1 au lieu du vrai niveau</div></div>
+  <div class="card bug"><div class="badge bug">⚠ Bug</div><div class="name">multichar — file d'attente</div><div class="desc">Queue création perso — 1 joueur à la fois</div></div>
+</div>
+
+<!-- INTERFACE -->
+<div class="section-title">Interface &amp; gameplay</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_hud</div><div class="desc">HUD custom complet</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_gps</div><div class="desc">GPS custom</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_radialmenu</div><div class="desc">Menu radial citoyen</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_emotes</div><div class="desc">Emotes + animations</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_progression</div><div class="desc">XP / niveaux 1→50</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_talents</div><div class="desc">Arbre talents 4 branches</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_minigames</div><div class="desc">Minijeux NUI custom</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_banking</div><div class="desc">Banque — UI custom</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_medical</div><div class="desc">Coma / réanimation</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_food</div><div class="desc">Nourriture + niveaux</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_time</div><div class="desc">Cycle 2h jour / 2h nuit — XP ×1.5 la nuit</div></div>
+</div>
+
+<!-- VEHICULES -->
+<div class="section-title">Véhicules &amp; garage</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_vehiclekeys</div><div class="desc">Clés de véhicule</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_garage</div><div class="desc">Pièces, usure, réparation NUI</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_garagehub</div><div class="desc">Hub garage custom NUI</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_esthetic</div><div class="desc">Tuning visuel + NOS</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cardealership</div><div class="desc">4 concessionnaires</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Concessionnaire drift</div><div class="desc">Catégorie drift — Futo GTX, Tampa, ZR380...</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Score global voiture</div><div class="desc">Stats base + pièces = score → filtre min/max par course</div></div>
+</div>
+
+<!-- ACTIVITES -->
+<div class="section-title">Activités criminelles</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cartheft</div><div class="desc">Vol voiture + balises</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_heist</div><div class="desc">ATM + conteneurs MK1/2/3</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_scrapyard</div><div class="desc">Ferrailleur + lockpick shop</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_police</div><div class="desc">IA police + poursuites</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_apartments</div><div class="desc">30 propriétés + meubles</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_convoy</div><div class="desc">Interception camion — sandwich NPC, crochetage remorque, timer + police</div><div class="tags"><span class="tag">MK2</span><span class="tag">MK3</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_surveillance</div><div class="desc">Filature voiture custom — balise, jauge discrétion, 4 spawns, 4 planques</div><div class="tags"><span class="tag">MK3</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_warehouse</div><div class="desc">Forcer porte hangar (minijeu) — police attend à la sortie, fuite en voiture</div><div class="tags"><span class="tag">MK1</span><span class="tag">MK2</span><span class="tag">MK3</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_delivery_coop</div><div class="desc">Livraison coop — pilote GPS brouillé, copilote guide en vocal, police dès le départ</div><div class="tags"><span class="tag">MK2</span><span class="tag">MK3</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Patrouilles nuit</div><div class="desc">Police patrouille uniquement la nuit — détection +120km/h → poursuite sportive</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Minijeu piratage ATM</div><div class="desc">Style Matrix — grille chiffres, séquence à cliquer dans l'ordre, timer</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Minijeu piratage USB</div><div class="desc">Style Matrix — 2 colonnes à aligner simultanément, difficulté par tier</div></div>
+</div>
+
+<!-- COURSES -->
+<div class="section-title">Courses &amp; compétitions — tier + score obligatoires sur toutes</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_race</div><div class="desc">Courses MK1/2/3</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Voiture obligatoire</div><div class="desc">Vérifier tier + score avant de rejoindre — toutes catégories</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Ghost driver</div><div class="desc">Enregistrer un tour via /racedev → NPC fantôme reproduit la trajectoire</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Courses par équipe</div><div class="desc">2 équipes — top X joueurs classe l'équipe gagnante</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Courses 4x4</div><div class="desc">Off-road — 4x4 obligatoire, tier + score requis</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Contre la montre</div><div class="desc">Solo — temps cible, tier + score requis, classement</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Épreuves drift</div><div class="desc">Score drift — voiture drift + tier + score requis</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Drift par équipe</div><div class="desc">Score drift cumulé — équipe avec le total le plus haut gagne</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Refonte lootbox course</div><div class="desc">Bons de réduction 3%/5%/9%/15% — max 3 items, moins de composants</div></div>
+</div>
+
+<!-- ENDGAME -->
+<div class="section-title">Endgame — pièces MK4 / MK5</div>
+<div class="grid">
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Pièces &amp; composants MK4</div><div class="desc">Toutes pièces + composants — niv. 40-45</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Pièces &amp; composants MK5</div><div class="desc">Tier ultime — niv. 45-50. Refonte éco après.</div></div>
+</div>
+
+<!-- PRIORITES -->
+<div class="section-title">Priorités &amp; backlog</div>
+<div class="grid">
+  <div class="card p1"><div class="badge p1">P1 Urgent</div><div class="name">raidly_trading</div><div class="desc">Bloquer tous échanges entre joueurs</div></div>
+  <div class="card p1"><div class="badge p1">P1 Urgent</div><div class="name">raidly_openworld</div><div class="desc">Pas de collision entre joueurs</div></div>
+  <div class="card"><div class="badge later">P2</div><div class="name">Minijeu marteau</div><div class="desc">Recyclage scrapyard</div></div>
+  <div class="card"><div class="badge later">P3</div><div class="name">raidly_esthetic</div><div class="desc">Pièces requises + visibles</div></div>
+  <div class="card"><div class="badge later">P4</div><div class="name">raidly_lootbox</div><div class="desc">Boîtes récompenses</div></div>
+  <div class="card"><div class="badge later">P5</div><div class="name">raidly_gasstation</div><div class="desc">Revoir stations essence</div></div>
+  <div class="card"><div class="badge later">P6</div><div class="name">raidly_impound</div><div class="desc">Fourrière from scratch</div></div>
+  <div class="card"><div class="badge later">Dernier</div><div class="name">Launcher custom</div><div class="desc">Pour rejoindre le serveur</div></div>
+</div>
+
+<div class="legend">
+  <div class="leg"><div class="dot done"></div> Terminé (27)</div>
+  <div class="leg"><div class="dot bug"></div> Bug actif (2)</div>
+  <div class="leg"><div class="dot p1"></div> Priorité P1 (2)</div>
+  <div class="leg"><div class="dot plan"></div> À venir (24)</div>
+  <div class="leg"><div class="dot later"></div> Backlog (6)</div>
+</div>
+
+<footer>Raidly FiveM Server — roadmap_raidly.html</footer>
+
+</body>
+</html>
