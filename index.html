@@ -145,16 +145,16 @@
   <div class="logo">🏁</div>
   <div>
     <h1>Roadmap Raidly</h1>
-    <p>Mise à jour — 2026-07-03</p>
+    <p>Mise à jour — 2026-07-04</p>
   </div>
 </header>
 
 <div class="stats">
-  <div class="stat"><div class="stat-n" style="color:var(--text-success)">30</div><div class="stat-l">Terminées</div></div>
-  <div class="stat"><div class="stat-n" style="color:var(--text-test)">2</div><div class="stat-l">En test</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-success)">29</div><div class="stat-l">Terminées</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-test)">3</div><div class="stat-l">En test</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-warning)">0</div><div class="stat-l">Bugs actifs</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-danger)">0</div><div class="stat-l">Priorité P1</div></div>
-  <div class="stat"><div class="stat-n" style="color:var(--text-dev)">0</div><div class="stat-l">En dev</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-dev)">1</div><div class="stat-l">En dev</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-accent)">23</div><div class="stat-l">À faire / planifier</div></div>
 </div>
 
@@ -170,6 +170,9 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_tattoo</div><div class="desc">Shop tatouage T1→T4</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">multichar — niveau</div><div class="desc">Fix : niveau récupéré depuis DB via citizenId avant chargement personnage</div></div>
   <div class="card test"><div class="badge test">🧪 Multi</div><div class="name">multichar — file d'attente</div><div class="desc">À tester en multi — mutex serveur, ped invisible pendant menu, 1 création à la fois</div></div>
+  <div class="card test"><div class="badge test">🧪 Multi</div><div class="name">raidly_trading</div><div class="desc">Bloquer échanges, drops, coffre/boîte à gants non-proprio — à tester en multi</div></div>
+  <div class="card test"><div class="badge test">🧪 Multi</div><div class="name">raidly_openworld</div><div class="desc">Pas de collision entre joueurs — à tester en multi</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Launcher custom</div><div class="desc">Pour rejoindre le serveur</div></div>
 </div>
 
 <!-- INTERFACE -->
@@ -197,6 +200,9 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_esthetic</div><div class="desc">Tuning visuel + NOS</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cardealership</div><div class="desc">5 concessionnaires (Airport/Commun/Sport/4x4/Luxe) — niveaux requis, prix exponentiels par rang, score caps validés (350/500/600/700/1000), exclusions drift/élec/DLC, shop occasion supprimé</div></div>
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Concessionnaire drift</div><div class="desc">Catégorie drift — Futo GTX, Tampa, ZR380...</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_esthetic</div><div class="desc">Pièces requises + visibles</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_gasstation</div><div class="desc">Revoir stations essence</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_impound</div><div class="desc">Fourrière from scratch</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Score global voiture</div><div class="desc">Score 0-1000 : vitesse/accel/frein base + bonus pièces (wear) → affiché dans le garagehub, filtre min/max par course</div></div>
 </div>
 
@@ -205,7 +211,7 @@
 <div class="grid">
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cartheft</div><div class="desc">Vol voiture + balises</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_heist</div><div class="desc">ATM + conteneurs MK1/2/3</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_scrapyard</div><div class="desc">Ferrailleur + lockpick shop</div></div>
+  <div class="card dev"><div class="badge dev">⚙ En dev</div><div class="name">raidly_scrapyard</div><div class="desc">Ferrailleur + lockpick shop — refonte zones de spawn MK1/2/3</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_police</div><div class="desc">IA police + poursuites</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_apartments</div><div class="desc">30 propriétés + meubles</div></div>
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">raidly_convoy</div><div class="desc">Interception camion — sandwich NPC, crochetage remorque, timer + police</div><div class="tags"><span class="tag">MK2</span><span class="tag">MK3</span></div></div>
@@ -215,6 +221,7 @@
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Patrouilles nuit</div><div class="desc">Police patrouille la nuit — détection +120km/h → poursuite sportive</div></div>
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Minijeu piratage ATM</div><div class="desc">Style Matrix — grille chiffres, séquence à cliquer, timer</div></div>
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Minijeu piratage USB</div><div class="desc">Style Matrix — 2 colonnes à aligner simultanément</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Minijeu marteau</div><div class="desc">Recyclage scrapyard</div></div>
 </div>
 
 <!-- COURSES -->
@@ -238,27 +245,14 @@
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Pièces &amp; composants MK5</div><div class="desc">Tier ultime — niv. 45-50. Refonte éco après.</div></div>
 </div>
 
-<!-- PRIORITES -->
-<div class="section-title">Priorités &amp; backlog</div>
-<div class="grid">
-  <div class="card test"><div class="badge test">🧪 Multi</div><div class="name">raidly_trading</div><div class="desc">Bloquer échanges, drops, coffre/boîte à gants non-proprio — à tester en multi</div></div>
-  <div class="card test"><div class="badge test">🧪 Multi</div><div class="name">raidly_openworld</div><div class="desc">Pas de collision entre joueurs — à tester en multi</div></div>
-  <div class="card"><div class="badge later">P2</div><div class="name">Minijeu marteau</div><div class="desc">Recyclage scrapyard</div></div>
-  <div class="card"><div class="badge later">P3</div><div class="name">raidly_esthetic</div><div class="desc">Pièces requises + visibles</div></div>
-  <div class="card"><div class="badge later">P4</div><div class="name">raidly_lootbox</div><div class="desc">Boîtes récompenses</div></div>
-  <div class="card"><div class="badge later">P5</div><div class="name">raidly_gasstation</div><div class="desc">Revoir stations essence</div></div>
-  <div class="card"><div class="badge later">P6</div><div class="name">raidly_impound</div><div class="desc">Fourrière from scratch</div></div>
-  <div class="card"><div class="badge later">Dernier</div><div class="name">Launcher custom</div><div class="desc">Pour rejoindre le serveur</div></div>
-</div>
 
 <div class="legend">
-  <div class="leg"><div class="dot done"></div> Terminé (30)</div>
-  <div class="leg"><div class="dot test"></div> En test (2)</div>
+  <div class="leg"><div class="dot done"></div> Terminé (29)</div>
+  <div class="leg"><div class="dot test"></div> En test (3)</div>
   <div class="leg"><div class="dot bug"></div> Bug actif (0)</div>
-  <div class="leg"><div class="dot p1"></div> Priorité P1 (2)</div>
-  <div class="leg"><div class="dot dev"></div> En dev (0)</div>
+  <div class="leg"><div class="dot dev"></div> En dev (1)</div>
   <div class="leg"><div class="dot plan"></div> À venir (23)</div>
-  <div class="leg"><div class="dot later"></div> Backlog (6)</div>
+  <div class="leg"><div class="dot later"></div> Backlog (5)</div>
 </div>
 
 <footer>Raidly FiveM Server — roadmap-raidly.netlify.app</footer>
