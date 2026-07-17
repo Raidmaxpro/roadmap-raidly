@@ -145,17 +145,17 @@
   <div class="logo">🏁</div>
   <div>
     <h1>Roadmap Raidly</h1>
-    <p>Mise à jour — 2026-07-07</p>
+    <p>Mise à jour — 2026-07-17 · session 6</p>
   </div>
 </header>
 
 <div class="stats">
-  <div class="stat"><div class="stat-n" style="color:var(--text-success)">42</div><div class="stat-l">Terminées</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-success)">52</div><div class="stat-l">Terminées</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-test)">11</div><div class="stat-l">En test</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-warning)">0</div><div class="stat-l">Bugs actifs</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-danger)">0</div><div class="stat-l">Priorité P1</div></div>
-  <div class="stat"><div class="stat-n" style="color:var(--text-dev)">0</div><div class="stat-l">En dev</div></div>
-  <div class="stat"><div class="stat-n" style="color:var(--text-accent)">5</div><div class="stat-l">À faire / planifier</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-dev)">1</div><div class="stat-l">En dev</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-accent)">6</div><div class="stat-l">À faire / planifier</div></div>
 </div>
 
 <!-- CORE -->
@@ -164,15 +164,15 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Cash → Banque</div><div class="desc">Tous paiements &amp; récompenses via banque — heist, cartheft, race, esthetic, medical, cardealership, superettes, carrosserie. Virements joueur→joueur bloqués.</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_multichar</div><div class="desc">Sélection personnage</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_spawn</div><div class="desc">Spawn + restauration</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_appearance</div><div class="desc">Vêtements, coiffure, tatouages</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_clothing</div><div class="desc">Shops vêtements + niveaux</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_barbershop</div><div class="desc">4 barbershops par tier</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_tattoo</div><div class="desc">Shop tatouage T1→T4</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_appearance</div><div class="desc">Nouveau menu visuel NUI — grille d'images CDN pour vêtements &amp; tatouages (aperçu de chaque item en temps réel) — shop coiffure en liste avec aperçu direct — fix : couleur coiffure restaurée sur annulation</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_clothing</div><div class="desc">Shop vêtements + niveaux · rendu 3D de chaque article directement dans la grille du menu</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_barbershop</div><div class="desc">4 barbershops par tier — fix : couleur coiffure restaurée sur annulation (hairColorSnapshot)</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_tattoo</div><div class="desc">Shop tatouage T1→T4 · rendu 3D de chaque tatouage directement dans la grille du menu</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">multichar — niveau</div><div class="desc">Fix : niveau récupéré depuis DB via citizenId avant chargement personnage</div></div>
   <div class="card test"><div class="badge test">En test multi</div><div class="name">multichar — file d'attente</div><div class="desc">À tester en multi — mutex serveur, ped invisible pendant menu, 1 création à la fois</div></div>
   <div class="card test"><div class="badge test">En test multi</div><div class="name">raidly_trading</div><div class="desc">Bloquer échanges, drops, coffre/boîte à gants non-proprio — à tester en multi</div></div>
-  <div class="card test"><div class="badge test">En test multi</div><div class="name">raidly_openworld</div><div class="desc">Pas de collision entre joueurs — à tester en multi</div></div>
-  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Launcher custom</div><div class="desc">Pour rejoindre le serveur</div></div>
+  <div class="card test"><div class="badge test">En test multi</div><div class="name">raidly_openworld</div><div class="desc">Ghost permanent entre joueurs — collision réseau désactivée (désactivable par gangwar/poursuite) — densité trafic &amp; piétons ×0.5 — dispatch police GTA natif désactivé — scénarios ambiant supprimés — trains &amp; bateaux aléatoires désactivés</div></div>
+  <div class="card dev"><div class="badge dev">En dev</div><div class="name">Launcher custom</div><div class="desc">Pour rejoindre le serveur</div></div>
 </div>
 
 <!-- INTERFACE -->
@@ -181,14 +181,27 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_hud</div><div class="desc">HUD custom complet</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_gps</div><div class="desc">GPS custom</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_radialmenu</div><div class="desc">Menu radial citoyen</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_emotes</div><div class="desc">Emotes + animations</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_progression</div><div class="desc">XP / niveaux 1→50</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_talents</div><div class="desc">Arbre talents 4 branches — rang 1 niv.5, rang 2 niv.20-25, rang 3 niv.40-50</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_minigames</div><div class="desc">Minijeux NUI custom</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_emotes</div><div class="desc">NUI 4 onglets (Emotes, Marche, Scénarios, Expressions) · 60+ emotes · 48 styles marche · 36 scénarios · 25 expressions · touche G · style Raidly</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_progression</div><div class="desc">XP / niveaux 1→50 · notifications de level up avec liste des déblocages (activités, items, features) au passage de niveau</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_talents</div><div class="desc">Refonte UI complète — arbre de nœuds SVG par branche, onglets Conducteur/Mécanicien/Criminel/Survie, états maxed/avail/locked — nouveau talent survie_faim (Métabolisme lent, -20/40/60% faim/soif) — système prérequis : talent parent rang ≥ 1 requis avant enfant (validé client + serveur) — coûts variables 1→5 pts selon rang et profondeur dans l'arbre — niveaux rebalancés NIV.5→50 — 2 talents criminel : criminel_croc_prec &amp; criminel_croc_res</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_crafting</div><div class="desc">Table de fabrication NUI custom — onglets par catégorie — combine des ressources pour fabriquer pièces mécaniques, équipements et consommables</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_radio</div><div class="desc">Radio véhicule NUI — musique accrochée au véhicule — barre seek, boucle, volume personnel indépendant par joueur — portée configurable — accessible uniquement via menu radial</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_minigames</div><div class="desc">8 mini-jeux NUI custom : Serrage boulons, Connexion câbles, Zone de précision, Fabrication (marteau), Piratage ATM (grille hex), Piratage USB (pluie Matrix), Forcer conteneur, Assemblage mécanique (engrenages)</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_banking</div><div class="desc">Banque — UI custom</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_medical</div><div class="desc">Coma / réanimation — blip pharmacie + PNJ TP vers son véhicule</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_food</div><div class="desc">Nourriture + niveaux</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_bipeur</div><div class="desc">Bipeur NUI — item utilisable — envoie ta position GPS à un autre joueur en ligne — le destinataire reçoit une notification et peut accepter (waypoint GPS) ou refuser</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_time</div><div class="desc">Heure GTA native — HUD horloge — thème rose/violet — XP ×1.5 la nuit</div></div>
+</div>
+
+<!-- AMBIANCE -->
+<div class="section-title">Ambiance &amp; map</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_visuals</div><div class="desc">Ambiance neon nuit — timecycle custom raidly_neon_night (bloom, teinte bleu/violet, lumières bâtiments) — visualsettings.dat streamé server-side (coronas, bloom, brightlight) — SetArtificialLightsState la nuit — météo OVERCAST + brouillard léger — commande txAdmin : raidlyvisuals force/off/auto</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">citylights</div><div class="desc">YMAP — néons animés sur bâtiments centre-ville</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">plam</div><div class="desc">YMAP — palmiers HD custom avec guirlandes lumineuses, répartis sur toute la map</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">zb_ParkCentral</div><div class="desc">YMAP — refonte parking central Downtown — lumières bleues néon + panneaux LED custom</div></div>
+  <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">YMAPs parkings néon</div><div class="desc">Étendre l'ambiance lumières bleues à tous les parkings de la map via Map Editor in-game</div></div>
 </div>
 
 <!-- VEHICULES -->
@@ -200,16 +213,18 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_esthetic</div><div class="desc">Tuning visuel + NOS + kit drift MK1/2/3 (handling, steeringLock) — exclusif voitures LS Tuners — bons de réduction 3/5/9/15%</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cardealership</div><div class="desc">5 concessionnaires (Airport/Commun/Sport/4x4/Luxe) — niveaux requis, prix exponentiels par rang, score caps validés (350/500/600/700/1000), exclusions drift/élec/DLC, shop occasion supprimé</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Concessionnaire drift</div><div class="desc">23 véhicules LS Tuners Niv. 10→45 — kit drift MK1/2/3 (suspension + handling) — exclusifs drift uniquement</div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_gasstation</div><div class="desc">Minijeu remplissage — hold E pour pomper, relâche pour payer — sync fuel via state bag ox_fuel — toutes les stations</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_gasstation</div><div class="desc">Minijeu remplissage — hold E pour pomper, relâche pour payer — sync fuel via state bag ox_fuel — toutes les stations — corde physique GTA V (AttachEntitiesToRope, rope type 1) entre pompe et pistolet — fix artefacts corde au raccrochage</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_objectives</div><div class="desc">HUD objectifs progressifs top-right — 12 étapes niv.1→50 — persistant en DB — triggers sur tous les métiers</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_impound</div><div class="desc">Fourrière — véhicules dehors au restart → mis en fourrière, mapping états corrigé</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">qbx_carwash</div><div class="desc">Mini-jeu kärcher NUI — voiture sale, passage pression sur toute la surface (grille 6px, rayon 22px), validation à 90% — annulation ESC — nettoie la voiture en serveur</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Score global voiture</div><div class="desc">Score 0-1000 : vitesse/accel/frein base + bonus pièces (wear) → affiché dans le garagehub, filtre min/max par course</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Limitateur de vitesse</div><div class="desc">Limitateur de vitesse véhicule — activable/désactivable in-game</div></div>
 </div>
 
 <!-- ACTIVITES -->
 <div class="section-title">Activités criminelles</div>
 <div class="grid">
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cartheft</div><div class="desc">Vol voiture + balises</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_cartheft</div><div class="desc">Vol voiture + balises — mini-jeu crochetage Fallout-style : 2 crochets (Q/D or, ←/→ bleu), rotation souris, zones probabilistes, talents crochetage câblés</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_heist</div><div class="desc">ATM + conteneurs MK1/2/3</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_scrapyard</div><div class="desc">Ferrailleur + lockpick shop — zones de spawn MK1/2/3 (10 spots chacune)</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_police</div><div class="desc">IA police + poursuites</div></div>
@@ -218,7 +233,7 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_surveillance</div><div class="desc">Filature voiture custom — balise, jauge discrétion, 4 spawns, 4 planques, caisse loot, 1/jour</div><div class="tags"><span class="tag">MK3</span></div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_warehouse</div><div class="desc">Carnet hangar → spot aléatoire → pied de biche → minijeu porte 6 stades → loot composants → police à la sortie — 5 spots MK1/2/3</div><div class="tags"><span class="tag">MK1</span><span class="tag">MK2</span><span class="tag">MK3</span></div></div>
   <div class="card test"><div class="badge test">🧪 En test multi</div><div class="name">raidly_delivery_coop</div><div class="desc">Livraison coop — pilote GPS brouillé, copilote guide en vocal</div><div class="tags"><span class="tag">MK2</span><span class="tag">MK3</span></div></div>
-  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_trash</div><div class="desc">Poubelles natives interactives — jeter des items définitivement, aucun autre joueur ne peut fouiller</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">raidly_trash</div><div class="desc">Poubelles natives interactives — NUI 2 panneaux drag &amp; drop : inventaire à gauche, poubelle à droite</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Patrouilles nuit</div><div class="desc">Police patrouille la nuit — détection +120km/h → poursuite sportive — barrages dynamiques — renforts progressifs</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Minijeu piratage ATM</div><div class="desc">Grille hex, séquence à cliquer dans l'ordre, pénalité -3s sur erreur</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Minijeu piratage USB</div><div class="desc">Pluie Matrix — repérer et cliquer la séquence 3/4/5 chars selon MK</div></div>
@@ -238,6 +253,7 @@
   <div class="card test"><div class="badge test">⧖ En test multi</div><div class="name">Courses 4x4</div><div class="desc">Off-road — 4x4 obligatoire, tier + score requis — <em>peu de courses dispo pour le moment</em></div><div class="tags"><span class="tag">tier + score</span></div></div>
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Courses par équipe</div><div class="desc">2 équipes — top X joueurs classe l'équipe gagnante</div><div class="tags"><span class="tag">tier + score</span></div></div>
   <div class="card plan"><div class="badge plan">◷ À venir</div><div class="name">Drift par équipe</div><div class="desc">Score drift cumulé — équipe avec le total le plus haut gagne</div><div class="tags"><span class="tag">tier + score</span></div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Classement de course</div><div class="desc">Table SQL race_records — top 10 par course — bouton 🏆 sur PNJ race — affiché en fin de course dans la NUI</div></div>
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Refonte lootbox course</div><div class="desc">Cash bank (toujours) + bon réduction pondéré par tier (MK1:3/5%, MK2:5/9%, MK3:9/15%) + composant scrapyard (rare)</div></div>
 </div>
 
@@ -250,11 +266,11 @@
 
 
 <div class="legend">
-  <div class="leg"><div class="dot done"></div> Terminé (37)</div>
-  <div class="leg"><div class="dot test"></div> En test (9)</div>
+  <div class="leg"><div class="dot done"></div> Terminé (52)</div>
+  <div class="leg"><div class="dot test"></div> En test (11)</div>
   <div class="leg"><div class="dot bug"></div> Bug actif (0)</div>
-  <div class="leg"><div class="dot dev"></div> En dev (1)</div>
-  <div class="leg"><div class="dot plan"></div> À venir (12)</div>
+  <div class="leg"><div class="dot dev"></div> En dev (0)</div>
+  <div class="leg"><div class="dot plan"></div> À venir (6)</div>
   <div class="leg"><div class="dot later"></div> Backlog (5)</div>
 </div>
 
