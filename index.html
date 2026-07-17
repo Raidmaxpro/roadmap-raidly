@@ -150,11 +150,11 @@
 </header>
 
 <div class="stats">
-  <div class="stat"><div class="stat-n" style="color:var(--text-success)">52</div><div class="stat-l">Terminées</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-success)">58</div><div class="stat-l">Terminées</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-test)">11</div><div class="stat-l">En test</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-warning)">0</div><div class="stat-l">Bugs actifs</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-danger)">0</div><div class="stat-l">Priorité P1</div></div>
-  <div class="stat"><div class="stat-n" style="color:var(--text-dev)">1</div><div class="stat-l">En dev</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--text-dev)">0</div><div class="stat-l">En dev</div></div>
   <div class="stat"><div class="stat-n" style="color:var(--text-accent)">6</div><div class="stat-l">À faire / planifier</div></div>
 </div>
 
@@ -172,7 +172,7 @@
   <div class="card test"><div class="badge test">En test multi</div><div class="name">multichar — file d'attente</div><div class="desc">À tester en multi — mutex serveur, ped invisible pendant menu, 1 création à la fois</div></div>
   <div class="card test"><div class="badge test">En test multi</div><div class="name">raidly_trading</div><div class="desc">Bloquer échanges, drops, coffre/boîte à gants non-proprio — à tester en multi</div></div>
   <div class="card test"><div class="badge test">En test multi</div><div class="name">raidly_openworld</div><div class="desc">Ghost permanent entre joueurs — collision réseau désactivée (désactivable par gangwar/poursuite) — densité trafic &amp; piétons ×0.5 — dispatch police GTA natif désactivé — scénarios ambiant supprimés — trains &amp; bateaux aléatoires désactivés</div></div>
-  <div class="card dev"><div class="badge dev">En dev</div><div class="name">Launcher custom</div><div class="desc">Pour rejoindre le serveur</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Launcher custom</div><div class="desc">Launcher Electron officiel — login/inscription, whitelist, récompenses quotidiennes, news, panel admin, profil FiveM — distribué via GitHub Pages</div></div>
 </div>
 
 <!-- INTERFACE -->
@@ -257,6 +257,17 @@
   <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Refonte lootbox course</div><div class="desc">Cash bank (toujours) + bon réduction pondéré par tier (MK1:3/5%, MK2:5/9%, MK3:9/15%) + composant scrapyard (rare)</div></div>
 </div>
 
+<!-- LAUNCHER & COMMUNAUTE -->
+<div class="section-title">Launcher &amp; Communauté</div>
+<div class="grid">
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">API Raidly (MySQL locale)</div><div class="desc">API Express locale avec MySQL — remplace Render/lowdb — persistance garantie, zéro reset au redémarrage — helmet, rate limiting (5/15min auth, 100/min général), JWT, bcrypt</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Cloudflare Tunnel</div><div class="desc">IP cachée derrière Cloudflare — URL auto-générée à chaque démarrage — mise à jour automatique via GitHub Gist pour tous les launchers joueurs</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Whitelist FiveM</div><div class="desc">playerConnecting vérifie le compte launcher — kick avec message si non inscrit ou non approuvé — licence FiveM liée au profil</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Récompenses quotidiennes</div><div class="desc">Streak calendrier 1→30 jours — casse du jour NUI — kit réparation / cash / bons réduction — reset si jour loupé — récompense donnée à la connexion FiveM via licence</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Panel Admin launcher</div><div class="desc">Validation / ban joueurs — édition &amp; suppression actualités — reset streak — reset mot de passe — visible uniquement pour Raidmax</div></div>
+  <div class="card done"><div class="badge done">✓ Fait</div><div class="name">Distribution &amp; auto-update</div><div class="desc">Build portable via electron-builder — page téléchargement GitHub Pages — auto-update electron-updater (mise à jour silencieuse au démarrage sans retélécharger)</div></div>
+</div>
+
 <!-- ENDGAME -->
 <div class="section-title">Endgame — pièces MK4 / MK5</div>
 <div class="grid">
@@ -266,7 +277,7 @@
 
 
 <div class="legend">
-  <div class="leg"><div class="dot done"></div> Terminé (52)</div>
+  <div class="leg"><div class="dot done"></div> Terminé (58)</div>
   <div class="leg"><div class="dot test"></div> En test (11)</div>
   <div class="leg"><div class="dot bug"></div> Bug actif (0)</div>
   <div class="leg"><div class="dot dev"></div> En dev (0)</div>
